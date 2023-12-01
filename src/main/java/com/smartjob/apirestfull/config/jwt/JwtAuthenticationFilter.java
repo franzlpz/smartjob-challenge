@@ -1,4 +1,4 @@
-package com.smartjob.apirestfull.config;
+package com.smartjob.apirestfull.config.jwt;
 
 import com.smartjob.apirestfull.repositories.TokenRepository;
 import jakarta.servlet.FilterChain;

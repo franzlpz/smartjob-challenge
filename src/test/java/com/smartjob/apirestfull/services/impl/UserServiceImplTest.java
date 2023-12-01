@@ -1,12 +1,11 @@
 package com.smartjob.apirestfull.services.impl;
 
-import com.smartjob.apirestfull.config.JwtService;
+import com.smartjob.apirestfull.config.jwt.JwtService;
 import com.smartjob.apirestfull.models.Token;
 import com.smartjob.apirestfull.models.User;
 import com.smartjob.apirestfull.models.dtos.PhoneDto;
 import com.smartjob.apirestfull.models.dtos.UserRequestDto;
 import com.smartjob.apirestfull.models.dtos.UserResponseDto;
-import com.smartjob.apirestfull.repositories.PhoneRepository;
 import com.smartjob.apirestfull.repositories.TokenRepository;
 import com.smartjob.apirestfull.repositories.UserRepository;
 import org.junit.jupiter.api.DisplayName;

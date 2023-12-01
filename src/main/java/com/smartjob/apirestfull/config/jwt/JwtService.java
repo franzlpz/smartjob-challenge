@@ -1,4 +1,4 @@
-package com.smartjob.apirestfull.config;
+package com.smartjob.apirestfull.config.jwt;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

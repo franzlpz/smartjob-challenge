@@ -22,9 +22,10 @@ public class ServiceResponse {
         return response;
     }
 
-    public static ServiceResponse general(String message) {
+    public static ServiceResponse general(String message, Object body) {
         ServiceResponse response = new ServiceResponse();
         response.setMessage(message);
+        response.setBody(body);
         return response;
     }
 

@@ -1,8 +1,10 @@
 package com.smartjob.apirestfull.config;
 
 import com.smartjob.apirestfull.config.auditing.ApplicationAuditAware;
+import com.smartjob.apirestfull.config.validation.ValidationConfig;
 import com.smartjob.apirestfull.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.domain.AuditorAware;

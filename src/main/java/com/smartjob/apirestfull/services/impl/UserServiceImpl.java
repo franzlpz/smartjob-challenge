@@ -1,6 +1,6 @@
 package com.smartjob.apirestfull.services.impl;
 
-import com.smartjob.apirestfull.config.JwtService;
+import com.smartjob.apirestfull.config.jwt.JwtService;
 import com.smartjob.apirestfull.models.Phone;
 import com.smartjob.apirestfull.models.Token;
 import com.smartjob.apirestfull.models.User;
@@ -14,7 +14,6 @@ import com.smartjob.apirestfull.repositories.UserRepository;
 import com.smartjob.apirestfull.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -42,11 +41,13 @@ public class UserServiceImpl implements UserService {
         return userRepository.findById(id)
                 .map( user -> UserResponseDto.builder()
                 .id(user.getId())
-                 .created(user.getCreated().toString())
-                 .modified(user.getModified().toString())
-                 .lastLogin(user.getLastLogin().toString())
-                 .token(user.getToken())
-                 .isActive(user.getIsActive())
+                .name(user.getName())
+                .email(user.getEmail())
+                .created(user.getCreated().toString())
+                .modified(user.getModified().toString())
+                .lastLogin(user.getLastLogin().toString())
+                .token(user.getToken())
+                .isActive(user.getIsActive())
                 .build());
 
     }
@@ -58,6 +59,8 @@ public class UserServiceImpl implements UserService {
         return users.stream()
                 .map( user -> UserResponseDto.builder()
                         .id(user.getId())
+                        .name(user.getName())
+                        .email(user.getEmail())
                         .created(user.getCreated().toString())
                         .modified(user.getModified().toString())
                         .lastLogin(user.getLastLogin().toString())
@@ -94,6 +97,8 @@ public class UserServiceImpl implements UserService {
 
         return Optional.of(UserResponseDto.builder()
                 .id(userResult.getId())
+                .name(userResult.getName())
+                .email(userResult.getEmail())
                 .created(userResult.getCreated().toString())
                 .modified(userResult.getModified().toString())
                 .lastLogin(userResult.getLastLogin().toString())

@@ -1,4 +1,4 @@
-package com.smartjob.apirestfull.config;
+package com.smartjob.apirestfull.config.security;
 
 import com.smartjob.apirestfull.repositories.TokenRepository;
 import lombok.RequiredArgsConstructor;
