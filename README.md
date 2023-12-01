@@ -1,13 +1,17 @@
 # smartjob-challenge
 API RESTFull para usuario
 
+# Diagrama de solución
+
+<image src="/Diagrama de solucion.png" alt="Descripción de la imagen">
+
 # Link para ver los endpoint
 http://localhost:8082/swagger-ui/index.html
 
 # Link para ver la base datos
 http://localhost:8082/h2-console/
 
-# Puerto por defecto 8082
+
 
 # Probar registro de usuario:
 curl --location 'http://localhost:8082/api/v1/users' \
